@@ -2,4 +2,81 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+nav {
+  height: 7vw;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5vh 10vw;
+  position: fixed;
+  top: 0;
+}
+nav h1 {
+  font-size: 1.8vw;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+#nav-2nd-sec {
+  display: flex;
+  align-items: start;
+  gap: 1.2vw;
+  position: relative;
+}
+#nav-2nd-sec h4{
+ font-size: 1.2vw;
+ margin-bottom: 3vh;
+ font-weight: 500;
+}
+#nav-2nd-sec h5 { 
+  display: none;
+  overflow: hidden;
+  padding: 0.4vw 0;
+  text-align: right;
+}
+#nav-2nd-sec h5 span{ 
+  font-size: 0.9vw;
+  transform: translateY(25px);
+  display: inline-block;
+  font-weight: 300;
+}
+#nav-bottom {
+  position: absolute;
+  width: 80%;
+  height: 0;
+  top: 100%;
+  border-bottom: 3px solid rgb(82, 73, 73);
+}
+nav button {
+   font-size: 1.1vw;
+   background-color: #0DA34E;
+   border: transparent;
+   padding: 0 15px;
+   border-radius: 50px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   transition: all 0.5s ease-out;
+}
+nav button:hover {
+  background-color: black;
+}
+nav button svg {
+  height: 6vh;
+  margin-left: 2vw;
+  background-color: #0DA34E;
+  border-radius: 50%;
+  padding: 10px;
+}
+#page1 {
+  background-color: black;
+  height: 100vh;
 }
