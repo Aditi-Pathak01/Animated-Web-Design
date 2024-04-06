@@ -4,7 +4,7 @@ function navAnimation() {
     let tl = gsap.timeline();
 
     tl.to("#nav-bottom", {
-      height: "18vh",
+      height: "20vh",
       duration: 0.5,
     });
 
@@ -43,3 +43,30 @@ function navAnimation() {
 }
 
 navAnimation();
+
+const page2Animation =()=>{
+let rElems = document.querySelectorAll(".r-elem")
+rElems.forEach((elem)=>{
+  elem.addEventListener("mouseenter",()=>{
+  gsap.to(elem.childNodes[3],{/*CHILD NODE3 IS THE MOVING IMG*/
+    opacity: 1,
+    scale: 1.8,
+  })
+  })
+
+  elem.addEventListener("mouseleave",()=>{
+    gsap.to(elem.childNodes[3],{
+      opacity: 0,
+      scale: 0,
+    })
+    })
+
+    elem.addEventListener("mousemove",function (dets) {
+      gsap.to(elem.childNodes[3],{
+       x:dets.x - elem.getBoundingClientRect().x - 90, /*dets.x will give the cursor posn & getBoundingClientRect() will give element posn on x & y axis*/
+       y:dets.y - elem.getBoundingClientRect().y - 70
+      })
+      })
+})
+}
+page2Animation()
