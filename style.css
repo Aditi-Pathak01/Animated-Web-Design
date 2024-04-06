@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: Gilroy-medium;
 }
 html,
 body {
@@ -10,73 +11,169 @@ body {
   width: 100%;
 }
 nav {
-  height: 7vw;
+  height: 6.6vw;
   width: 100%;
-  background-color: black;
+  background-color: #111111;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 5vh 10vw;
+  padding: 5vh 6vw;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 nav h1 {
-  font-size: 1.8vw;
+  font-size: 1.7vw;
+  font-family: Gilroy-Bold;
   text-transform: uppercase;
-  font-weight: bolder;
 }
 #nav-2nd-sec {
   display: flex;
   align-items: start;
-  gap: 1.2vw;
+  gap: 2vw;
   position: relative;
+  padding: 1vh 0;
 }
-#nav-2nd-sec h4{
- font-size: 1.2vw;
- margin-bottom: 3vh;
- font-weight: 500;
+#nav-2nd-sec h4 {
+  font-size: 0.9vw;
+  margin-bottom: 2vh;
+  text-transform: uppercase;
+  font-family: Gilroy-semibold;
 }
-#nav-2nd-sec h5 { 
+#nav-2nd-sec h5 {
   display: none;
   overflow: hidden;
   padding: 0.4vw 0;
   text-align: right;
-}
-#nav-2nd-sec h5 span{ 
   font-size: 0.9vw;
+}
+
+#nav-2nd-sec h5 span {
+  font-size: 0.8vw;
   transform: translateY(25px);
   display: inline-block;
-  font-weight: 300;
+  font-family: Gilroy-light;
 }
 #nav-bottom {
   position: absolute;
-  width: 80%;
+  width: 86%;
   height: 0;
   top: 100%;
   border-bottom: 3px solid rgb(82, 73, 73);
+  background-color: #111111;
+  z-index: -1;
 }
 nav button {
-   font-size: 1.1vw;
-   background-color: #0DA34E;
-   border: transparent;
-   padding: 0 15px;
-   border-radius: 50px;
-   display: flex;
-   align-items: center;
-   cursor: pointer;
-   transition: all 0.5s ease-out;
+  background-color: #0da34e;
+  border: transparent;
+  font-size: 1.1rem;
+  padding: 13px 15px;
+  align-self: center;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav button:hover {
   background-color: black;
 }
 nav button svg {
-  height: 6vh;
-  margin-left: 2vw;
-  background-color: #0DA34E;
+  height: 2vh;
+  margin-left: 1.8vw;
+  transition: all 0.6s ease;
+}
+nav button:hover svg {
+  background-color: #0da34e;
   border-radius: 50%;
   padding: 10px;
+  height: 4vh;
 }
 #page1 {
-  background-color: black;
   height: 100vh;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 9vw;
+  position: relative;
 }
+#page1 h1 {
+  font-size: 17vh;
+  font-family: gilroy-bold;
+  line-height: 1.05;
+  text-align: center;
+}
+#page1 h1 span svg {
+  height: 6.5vw;
+  width: 6.5vw;
+  background-color: #0da34e;
+  border-radius: 50%;
+  padding: 1.9rem;
+}
+
+#page1 p {
+  margin: 2vw 0 0.4vw;
+  width: 37vw;
+  text-align: center;
+  font-size: 1.28vw;
+  font-family: Gilroy-light;
+  line-height: 1.3;
+}
+#page1 div {
+  margin-top: 0.2vw;
+}
+#page1 div span {
+  border: 0.7px solid #666;
+  font-family: Gilroy-light;
+  font-size: 1.2vw;
+  padding: 0.5vw;
+  border-radius: 20px;
+}
+#page1 div span:nth-child(3) {
+  border: transparent;
+  padding: 0.1vw 0;
+}
+#page1 #moving-div {
+  position: absolute;
+  bottom: 3%;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2.5vh;
+}
+.move {
+  display: inline-block;
+  animation: imgMove 15s infinite linear 0s;
+}
+.move img {
+  height: 1.05vw;
+  margin-inline: 1vw;
+}
+@keyframes imgMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#blur-left {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to left, transparent, #111111);
+  z-index: 2;
+}
+#blur-right {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, transparent, #111111);
+  z-index: 2;
+}
+
