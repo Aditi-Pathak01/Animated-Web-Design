@@ -48,8 +48,8 @@ const page2Animation = () => {
     elem.addEventListener("mouseenter", () => {
       gsap.to(elem.childNodes[3], {
         //CHILD NODE3 IS THE MOVING IMG opacity: 1,
-        opacity:1,
-        scale: 1.8
+        opacity: 1,
+        scale: 1.8,
       });
     });
 
@@ -109,6 +109,5 @@ const page5Animation = () => {
 
 navAnimation();
 page2Animation();
-page3Animation()
-page5Animation()
-
+page3Animation();
+page5Animation();
