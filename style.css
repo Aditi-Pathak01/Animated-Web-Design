@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: Gilroy-medium;
 }
 html,
 body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 /*NAV-SECTION*/
 nav {
@@ -22,6 +22,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 2;
+  color: white;
 }
 nav h1 {
   font-size: 1.7vw;
@@ -65,6 +66,7 @@ nav h1 {
   z-index: -1;
 }
 nav button {
+  color: white;
   background-color: #0da34e;
   border: transparent;
   font-size: 1.1rem;
@@ -99,6 +101,7 @@ nav button:hover svg {
   align-items: center;
   padding: 0 10vw;
   position: relative;
+  color: white;
 }
 #page-1 h1 {
   font-size: 17vh;
@@ -195,6 +198,7 @@ nav button:hover svg {
   justify-content: space-between;
   padding: 1vh 10vh;
   border-top: 1px solid #333;
+  color: white;
 }
 #page-2-left {
   width: 40%;
@@ -226,7 +230,7 @@ nav button:hover svg {
   position: relative;
 }
 .r-elem h2 {
-  position: relative;/*VERY IMP*/
+  position: relative; /*VERY IMP*/
   font-size: 1.5vw;
   font-family: gilroy-light;
   z-index: 1;
@@ -238,7 +242,7 @@ nav button:hover svg {
   border-radius: 50%;
   object-fit: cover;
   opacity: 0;
-  scale: 0; 
+  scale: 0;
   z-index: 0;
 }
 #page-2-right .r-elem:last-child {
@@ -271,40 +275,91 @@ nav button:hover svg {
   align-items: center;
   position: relative;
 }
+#page-3-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 1rem;
+}
 #page-3-icon {
   background-color: white;
   padding: 3.5vw;
-  margin-bottom: 0.5rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#page-3-icon i{
+#page-3-icon i {
   color: black;
   font-size: 3vw;
 }
-#watch-reel {
+#page-3-center h5 {
   color: black;
   background-color: white;
   font-size: 0.8vw;
-  padding: 8.3px 0;
+  padding: 8.3px 10px;
   text-align: center;
   font-family: gilroy-semibold;
   border-radius: 15px;
   opacity: 0;
+  transition: all ease 0.5;
+  transform: translateY(35%);
   transition: all 0.5s ease;
-  transform: translateY(3%);
+  margin-top: 0.5rem;
 }
-#page-3-center:hover #watch-reel{
- opacity: 1;
- transform: translateY(0%);
+#page-3-center:hover h5 {
+  opacity: 1;
+  transform: translateY(0%);
 }
 #page-3 video {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  transform: translateY(10%) scaleX(1) scaleY(1);
-  opacity: 0;
+  transform: translateY(20%) scaleX(0.5) scaleY(0.01);
   z-index: 10;
+  opacity: 0;
+}
+/*PAGE-4-make by self*/
+/*PAGE-5*/
+#page-5 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 6vh 6vw;
+}
+#page-5-left {
+  width: 30%;
+  height: 80vh;
+  border-top: 1px solid black;
+  padding-top: 5vh;
+}
+#page-5-left h2 {
+  font-size: 2.5vw;
+}
+#page-5-left p {
+  margin-top: 15vh;
+  font-size: 1.2vw;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#page-5-right {
+  width: 60%;
+  height: 70vh;
+  position: relative;
+}
+#page-5-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+#page-5-right video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  opacity: 0;
 }

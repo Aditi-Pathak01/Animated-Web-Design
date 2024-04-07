@@ -47,8 +47,9 @@ const page2Animation = () => {
   rElems.forEach((elem) => {
     elem.addEventListener("mouseenter", () => {
       gsap.to(elem.childNodes[3], {
-        /*CHILD NODE3 IS THE MOVING IMG*/ opacity: 1,
-        scale: 1.8,
+        //CHILD NODE3 IS THE MOVING IMG opacity: 1,
+        opacity:1,
+        scale: 1.8
       });
     });
 
@@ -74,24 +75,40 @@ const page3Animation = () => {
   let page3Center = document.querySelector("#page-3-center");
   let video = document.querySelector("#page-3 video");
   page3Center.addEventListener("click", () => {
-    video.play()
-    gsap.to(video,{
+    video.play();
+    gsap.to(video, {
       opacity: 1,
       transform: "translateY(0%) scaleX(1.1) scaleY(1.2)",
-      borderRadius: "0"
-    })
-
-  }); 
+      borderRadius: "0",
+    });
+  });
   video.addEventListener("click", () => {
-    video.pause()
-    gsap.to(video,{
+    video.pause();
+    gsap.to(video, {
       opacity: 0,
       transform: "translateY(10%) scaleX(0.5) scaleY(0.2)",
       duration: 0.5,
-      borderRadius: "100px"
-    })
+      borderRadius: "100px",
+    });
   });
 };
-page3Animation();
-/*navAnimation();
-page2Animation()*/
+
+const page5Animation = () => {
+  let page5Right = document.querySelector("#page-5-right");
+  page5Right.addEventListener("mouseenter", () => {
+    page5Right.childNodes[1].style.opacity = 0;
+    page5Right.childNodes[3].style.opacity = 1;
+    page5Right.childNodes[3].play();
+  });
+  page5Right.addEventListener("mouseleave", () => {
+    page5Right.childNodes[1].style.opacity = 1;
+    page5Right.childNodes[3].style.opacity = 0;
+    page5Right.childNodes[3].load();
+  });
+};
+
+navAnimation();
+page2Animation();
+page3Animation()
+page5Animation()
+
