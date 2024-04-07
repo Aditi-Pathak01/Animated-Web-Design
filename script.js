@@ -16,8 +16,8 @@ function navAnimation() {
     tl.to("#nav-2nd-sec h5 span", {
       y: 0,
       stagger: {
-        amount : 0.5
-      }
+        amount: 0.5,
+      },
     });
 
     nav.addEventListener("mouseleave", () => {
@@ -26,8 +26,8 @@ function navAnimation() {
       tl.to("#nav-2nd-sec h5 span", {
         y: 25,
         stagger: {
-          amount : 0.2
-        }
+          amount: 0.2,
+        },
       });
       tl.to("#nav-2nd-sec h5", {
         display: "none",
@@ -42,31 +42,56 @@ function navAnimation() {
   });
 }
 
-navAnimation();
+const page2Animation = () => {
+  let rElems = document.querySelectorAll(".r-elem");
+  rElems.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      gsap.to(elem.childNodes[3], {
+        /*CHILD NODE3 IS THE MOVING IMG*/ opacity: 1,
+        scale: 1.8,
+      });
+    });
 
-const page2Animation =()=>{
-let rElems = document.querySelectorAll(".r-elem")
-rElems.forEach((elem)=>{
-  elem.addEventListener("mouseenter",()=>{
-  gsap.to(elem.childNodes[3],{/*CHILD NODE3 IS THE MOVING IMG*/
-    opacity: 1,
-    scale: 1.8,
-  })
-  })
+    elem.addEventListener("mouseleave", () => {
+      gsap.to(elem.childNodes[3], {
+        opacity: 0,
+        scale: 0,
+      });
+    });
 
-  elem.addEventListener("mouseleave",()=>{
-    gsap.to(elem.childNodes[3],{
+    elem.addEventListener("mousemove", function (dets) {
+      gsap.to(elem.childNodes[3], {
+        x:
+          dets.x -
+          elem.getBoundingClientRect().x -
+          90 /*dets.x will give the cursor posn & getBoundingClientRect() will give element posn on x & y axis*/,
+        y: dets.y - elem.getBoundingClientRect().y - 70,
+      });
+    });
+  });
+};
+const page3Animation = () => {
+  let page3Center = document.querySelector("#page-3-center");
+  let video = document.querySelector("#page-3 video");
+  page3Center.addEventListener("click", () => {
+    video.play()
+    gsap.to(video,{
+      opacity: 1,
+      transform: "translateY(0%) scaleX(1.1) scaleY(1.2)",
+      borderRadius: "0"
+    })
+
+  }); 
+  video.addEventListener("click", () => {
+    video.pause()
+    gsap.to(video,{
       opacity: 0,
-      scale: 0,
+      transform: "translateY(10%) scaleX(0.5) scaleY(0.2)",
+      duration: 0.5,
+      borderRadius: "100px"
     })
-    })
-
-    elem.addEventListener("mousemove",function (dets) {
-      gsap.to(elem.childNodes[3],{
-       x:dets.x - elem.getBoundingClientRect().x - 90, /*dets.x will give the cursor posn & getBoundingClientRect() will give element posn on x & y axis*/
-       y:dets.y - elem.getBoundingClientRect().y - 70
-      })
-      })
-})
-}
-page2Animation()
+  });
+};
+page3Animation();
+/*navAnimation();
+page2Animation()*/

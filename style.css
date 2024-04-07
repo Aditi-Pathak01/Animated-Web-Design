@@ -260,3 +260,51 @@ nav button:hover svg {
   top: 2vw;
   font-family: gilroy-light;
 }
+/*PAGE-3*/
+#page-3 {
+  height: 80vh;
+  width: 100vw;
+  background-image: url(assets/page-3.webp);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#page-3-icon {
+  background-color: white;
+  padding: 3.5vw;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page-3-icon i{
+  color: black;
+  font-size: 3vw;
+}
+#watch-reel {
+  color: black;
+  background-color: white;
+  font-size: 0.8vw;
+  padding: 8.3px 0;
+  text-align: center;
+  font-family: gilroy-semibold;
+  border-radius: 15px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translateY(3%);
+}
+#page-3-center:hover #watch-reel{
+ opacity: 1;
+ transform: translateY(0%);
+}
+#page-3 video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(10%) scaleX(1) scaleY(1);
+  opacity: 0;
+  z-index: 10;
+}
