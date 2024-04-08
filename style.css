@@ -363,3 +363,100 @@ nav button:hover svg {
   left: 0;
   opacity: 0;
 }
+/*Page-7*/
+#page-7 {
+  min-height: 120vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 15vh 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#page-7>button {
+  width: 24%;
+  border: transparent;
+  background-color: #0DA34E;
+  color: white;
+  padding: 2vh 4vw;
+  border-radius: 3vw;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+}
+#page-7-right {
+  width: 70%;
+}
+#page-7-right>p {
+  font-size: 2.15vw;
+  font-family: Neue Haas Grotesk Display Pro;
+  padding-bottom: 8vh;
+  border-bottom: 2px solid white;
+}
+#page-7-right p span {
+  font-size: 1.3vw;
+  font-family: Neue Haas Grotesk Display Pro;
+  color: #666;
+  width: 18vw;
+  display: inline-block;
+  vertical-align: top;
+}
+#ui-ux-design,#product-design {
+  padding: 5vh 0;
+  border-bottom: 0.5px solid grey;
+  cursor: pointer;
+  position: relative;
+}
+#topic-content,#p-topic-content {
+  cursor: pointer;
+}
+#ui-ux-design h1,#product-design h1 {
+ font-size: 3vw;
+}
+#ui-ux-design #topics,#product-design #p-topics {
+  display: flex;
+  text-transform: uppercase;
+  margin-top: 3.5vh;
+ }
+ #ui-ux-design i,#product-design i {
+  position: absolute;
+  right: 0;
+  top: 4vh;
+  font-size: 1.8vw;
+ }
+ #topics h4,#p-topics h4 {
+  font-size: 0.9vw;
+  padding: 1.2vh 1vw;
+  border: 1px solid grey;
+  border-radius: 1.5vw;
+  font-weight: bold;
+}
+.topic {
+  padding: 4vh 0 8vh;
+  border-bottom: 0.5px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.topic h4 {
+  font-size: 1.7vw;
+  font-family: Neue Haas Grotesk Display Pro;
+  color: #FEFEFE;
+}
+.topic>p {
+  color: #FEFEFE;
+  width: 50%;
+  font-size: 1.2vw;
+  line-height: 1.2;
+  font-family: Neue Haas Grotesk Display Pro;
+}
+.topic>i {
+  font-size: 1.4vw;
+}
+#product-design {
+  min-height: 50vh;
+  border-bottom: transparent;
+}
+#p-topic-content {
+  display: none;
+}
