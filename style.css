@@ -104,12 +104,12 @@ nav button:hover svg {
   color: white;
 }
 #page-1 h1 {
-  font-size: 17vh;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 8.5vw;
   font-family: gilroy-bold;
-  line-height: 1.05;
   text-align: center;
-  letter-spacing: 0.01em;
-  transition: all 0.1s;
 }
 #page-1 h1 span svg {
   height: 6.5vw;
@@ -328,6 +328,7 @@ nav button:hover svg {
   justify-content: space-between;
   align-items: start;
   padding: 6vh 6vw;
+  background-color: white;
 }
 #page-5-left {
   width: 30%;
@@ -362,13 +363,13 @@ nav button:hover svg {
   opacity: 0;
 }
 #cursor i {
- color: white;
- position: absolute;
- right: 1.2vw;
- top: 1.6vh;
- font-size: 1.3vw;
+  color: white;
+  position: absolute;
+  right: 1.2vw;
+  top: 1.6vh;
+  font-size: 1.3vw;
 }
-#cursor h5{
+#cursor h5 {
   color: white;
   font-size: 0.7vw;
   text-align: left;
@@ -402,11 +403,11 @@ nav button:hover svg {
   align-items: flex-start;
   position: relative;
 }
-#page-7-btn  {
+#page-7-btn {
   height: 7vh;
   width: 20vw;
   border-radius: 3vw;
-  background-color: #0DA34E;
+  background-color: #0da34e;
   text-transform: uppercase;
   position: sticky;
   top: 20%;
@@ -428,7 +429,7 @@ nav button:hover svg {
 #page-7-right {
   width: 70%;
 }
-#page-7-right>p {
+#page-7-right > p {
   font-size: 2.1vw;
   font-family: Neue Haas Grotesk Display Pro;
   padding-bottom: 9vh;
@@ -441,36 +442,42 @@ nav button:hover svg {
   display: inline-block;
   vertical-align: top;
 }
-#ui-ux-design,#product-design {
+#ui-ux-design,
+#product-design {
   padding: 3vh 0 7vh;
   border-top: 0.5px solid grey;
   border-bottom: 0.5px solid grey;
   cursor: pointer;
   position: relative;
 }
-#ui-ux-design h1,#product-design h1 {
- font-size: 3.5vw;
+#ui-ux-design h1,
+#product-design h1 {
+  font-size: 3.5vw;
 }
-#ui-ux-design #topics,#product-design #p-topics {
+#ui-ux-design #topics,
+#product-design #p-topics {
   display: flex;
   text-transform: uppercase;
   margin-top: 1vh;
- }
-#topics h4,#p-topics h4 {
+}
+#topics h4,
+#p-topics h4 {
   font-size: 0.9vw;
   padding: 1.2vh 1vw;
   border: 1px solid grey;
   border-radius: 1.5vw;
   font-weight: bold;
 }
-#ui-ux-design i,#product-design i {
+#ui-ux-design i,
+#product-design i {
   position: absolute;
   right: 0;
   top: 4vh;
   font-size: 1.8vw;
- }
+}
 
-#topic-content,#p-topic-content {
+#topic-content,
+#p-topic-content {
   cursor: pointer;
 }
 .topic {
@@ -487,11 +494,9 @@ nav button:hover svg {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
+  top: -100%;
   left: 0;
   background-color: #333;
-  opacity: 0;
-  transform: translateY(-100%);
   transition: all 0.4s ease;
 }
 .topic:hover {
@@ -499,24 +504,23 @@ nav button:hover svg {
   border-top: 1.5px solid #fff;
 }
 .topic:hover .over {
-  opacity: 1;
-  transform: translateY(0%);
+ top: 0;
 }
 .topic h4 {
   font-size: 1.7vw;
   font-family: Neue Haas Grotesk Display Pro;
-  color: #FEFEFE;
+  color: #fefefe;
   position: relative;
 }
-.topic>p {
-  color: #FEFEFE;
+.topic > p {
+  color: #fefefe;
   width: 50%;
   font-size: 1.1vw;
   line-height: 1.1;
   font-family: Neue Haas Grotesk Display Pro;
   position: relative;
 }
-.topic>i {
+.topic > i {
   font-size: 1.4vw;
   position: relative;
 }
@@ -525,4 +529,92 @@ nav button:hover svg {
 }
 summary::marker {
   content: "";
+}
+/*PAGE-8*/
+#page-8 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 5vh 5vw;
+  background-color: white;
+}
+#page-8-top {
+  padding-left: 35vw;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid #dadada;
+}
+#page-8-top h1 {
+  font-size: 6vw;
+  line-height: 1;
+}
+#page-8-bottom {
+  padding: 2vh 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-top: 1px solid #dadada;
+}
+#page-8-bottom div:nth-child(1) {
+  width: 30%;
+  height: 30vh;
+}
+#page-8-bottom div:nth-child(2) {
+  width: 40%;
+  height: 30vh;
+  padding: 2vh 1vw;
+}
+#page-8-bottom div:nth-child(2) h5 {
+  font-size: 1.5vw;
+  margin-bottom: 1rem;
+}
+#page-8-bottom div:nth-child(2) h4 {
+  font-size: 0.9vw;
+  width: 70%;
+  margin-top: 0.1rem;
+  background: black;
+  color: white;
+  border-radius: 40px;
+  padding: 0.9vh 0.8vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.3rem;
+  font-family: gilroy-light;
+}
+#page-8-bottom div:nth-child(2) span {
+  font-size: 0.9vw;
+  background: rgb(67, 64, 64);
+  color: rgb(238, 233, 233);
+  border-radius: 15px;
+  padding: 0.5vh 0.6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+#page-8-bottom h4:nth-child(3) {
+  transform: translateX(20%);
+}
+#page-8-bottom h4:nth-child(4) {
+  transform: translateX(30%);
+}
+#page-8-bottom h4:nth-child(5) {
+  transform: translateX(50%);
+}
+#page-8-bottom h4:nth-child(6) {
+  transform: translateX(70%);
+}
+#page-8-bottom h4:nth-child(7) {
+  transform: translateX(90%);
+}
+#page-8-bottom div:nth-child(3) {
+  width: 20%;
+  height: 30vh;
+}
+#page-8-bottom div:nth-child(4) {
+  width: 20%;
+  height: 30vh;
 }

@@ -10,7 +10,7 @@ function locomotiveAnimation() {
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
 
-  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+  // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
       return arguments.length
@@ -28,12 +28,36 @@ function locomotiveAnimation() {
     // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
   });
 
-  // --- PURPLE/GREEN PANEL ---
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
+}
+function loadingAnimation() {
+  var tl = gsap.timeline();
+  tl.from("#page-1", {
+    opacity:0,
+    duration:0.4
+  });
+
+
+  tl.from("#page-1", {
+    transform: "scaleX(0.6) scaleY(0.1) translateY(100%)",
+    borderRadius: "5vw",
+    duration: 1,
+    delay: 0.6,
+  });
+  tl.from("nav", {
+    opacity: 0,
+    duration: 1,
+    delay: 0.2,
+  });
+  tl.from("#page-1 h1, #page-1 p,#page-1>div", {
+    opacity: 0,
+    stagger: 0.6,
+    delay:0.1
+  });
 }
 
 function navAnimation() {
@@ -158,9 +182,26 @@ const page5Animation = () => {
     });
   });
 };
+const page8Animation = () => {
+  gsap.from("#p8-2 h4", {
+    x: 0, //sets the intial position for animation
+    duration: 1, //sets time of animation
+    scrollTrigger: {
+      trigger: "#p8-2", //can be target or target container
+      scroller: "#main", //generally body but can be main parent container(imf for locomotive to work)
+      start: "top 80%", //sets start posn of the trigger to 80% from top of viewport.
+      end: "end 10%", //sets end posn of the trigger to 10% from end of viewport.
+      scrub: true, //base animation completely on scrolling!
+      //markers: true, shows markers which help in visualization and debugging,
+    },
+  });
+};
 
 locomotiveAnimation();
+
 navAnimation();
 page2Animation();
 page3Animation();
 page5Animation();
+page8Animation();
+loadingAnimation();
