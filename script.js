@@ -37,26 +37,24 @@ function locomotiveAnimation() {
 function loadingAnimation() {
   var tl = gsap.timeline();
   tl.from("#page-1", {
-    opacity:0,
-    duration:0.4
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.2
   });
-
-
   tl.from("#page-1", {
     transform: "scaleX(0.6) scaleY(0.1) translateY(100%)",
     borderRadius: "5vw",
-    duration: 1,
-    delay: 0.6,
+    duration: 2,
+    ease: "expo.out"
   });
   tl.from("nav", {
     opacity: 0,
-    duration: 1,
     delay: 0.2,
   });
   tl.from("#page-1 h1, #page-1 p,#page-1>div", {
     opacity: 0,
+    duration:0.5,
     stagger: 0.6,
-    delay:0.1
   });
 }
 
@@ -183,11 +181,11 @@ const page5Animation = () => {
   });
 };
 const page8Animation = () => {
-  gsap.from("#p8-2 h4", {
+  gsap.from("#p8-1 h4", {
     x: 0, //sets the intial position for animation
     duration: 1, //sets time of animation
     scrollTrigger: {
-      trigger: "#p8-2", //can be target or target container
+      trigger: "#p8-1", //can be target or target container
       scroller: "#main", //generally body but can be main parent container(imf for locomotive to work)
       start: "top 80%", //sets start posn of the trigger to 80% from top of viewport.
       end: "end 10%", //sets end posn of the trigger to 10% from end of viewport.
